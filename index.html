@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Momentum App</title>
-  </head>
-  <body>
-    <form class="hidden" id="login-form">
-      <input required maxlength="15" type="text" placeholder="What is your name?" />
-      <button>Login</button>
-    </form>
-    <h2 id="clock">00:00:00</h2>
-    <h1 class="hidden" id="greeting"></h1>
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
-    <script src="js/greeting.js"></script>
-    <script src="js/clock.js"></script>
-    <script src="js/quotes.js"></script>
-    <script src="js/background.js"></script>
-  </body>
+<html>
+    <head>
+        <title>Vanilla Challenge</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <h1>Random Number Game</h1>
+        <div class="info">
+            <form class="input">
+                <div class="range">
+                    <label for="range">Generate a number between 0 and</label>
+                    <input required type="number" id="range" style="width: 150px;" min="0" />
+                </div>
+                <div class="choice">
+                    <label for="choice">Guess the number:</label>
+                    <input required type="number" id="choice" style="width: 150px;" min="0" />
+                    <button>Play!</button>
+                </div>
+            </form>
+        </div>
+        <div class="result">
+            <p class="guess">
+                You chose: <span id="user"></span>,
+                the machine chose: <span id="computer"></span>.
+            </p>
+            <p id="victory"></p>
+        </div>
+        <script src="js/index.js"></script>
+    </body>
 </html>
