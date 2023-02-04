@@ -1,3 +1,3 @@
-# Noom
+# Nomentum
 
-Zoom Clone using NodeJS, WebRTC and Websockets.
+Momentum Clone using VanillaJS and Weather API.
