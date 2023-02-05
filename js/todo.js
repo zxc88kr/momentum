@@ -1,10 +1,27 @@
+const toDoBtn = document.getElementById("todo-button");
+const toDoModal = document.getElementById("todo-modal");
+
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
+const TODOS_MODAL_OVERLAY = "modal-overlay";
+const TODOS_HIDDEN_CL = "hidden";
 const TODOS_KEY = "todos";
 
 let toDos = [];
+
+toDoBtn.addEventListener("click", (event) => {
+    event.preventDefault();
+    toDoModal.classList.remove(TODOS_HIDDEN_CL);
+});
+
+toDoModal.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (event.target.classList.contains(TODOS_MODAL_OVERLAY)) {
+        toDoModal.classList.add(TODOS_HIDDEN_CL);
+    }
+});
 
 function saveToDos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));

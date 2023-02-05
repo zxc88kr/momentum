@@ -6,37 +6,37 @@ const loginInput = loginForm.querySelector("input");
 const helloMessage = document.getElementById("hello-message");
 const logoutBtn = document.getElementById("logout-button");
 
-const HIDDEN_CLASSNAME = "hidden";
-const USERNAME_KEY = "username";
+const LOGIN_HIDDEN_CL = "hidden";
+const LOGIN_USERNAME_KEY = "username";
 
 function paintLobbyPage() {
-    lobby.classList.remove(HIDDEN_CLASSNAME);
-    main.classList.add(HIDDEN_CLASSNAME);
+    lobby.classList.remove(LOGIN_HIDDEN_CL);
+    main.classList.add(LOGIN_HIDDEN_CL);
     loginForm.addEventListener("submit", handleLoginSubmit);
 }
 
 function handleLogoutBtnClick(event) {
     event.preventDefault();
-    localStorage.removeItem(USERNAME_KEY);
+    localStorage.removeItem(LOGIN_USERNAME_KEY);
     paintLobbyPage();
 }
 
 function paintMainPage() {
-    const username = localStorage.getItem(USERNAME_KEY);
+    const username = localStorage.getItem(LOGIN_USERNAME_KEY);
     helloMessage.innerText = `Hello ${username}`;
-    lobby.classList.add(HIDDEN_CLASSNAME);
-    main.classList.remove(HIDDEN_CLASSNAME);
+    lobby.classList.add(LOGIN_HIDDEN_CL);
+    main.classList.remove(LOGIN_HIDDEN_CL);
     logoutBtn.addEventListener("click", handleLogoutBtnClick);
 }
 
 function handleLoginSubmit(event) {
     event.preventDefault();
-    localStorage.setItem(USERNAME_KEY, loginInput.value);
+    localStorage.setItem(LOGIN_USERNAME_KEY, loginInput.value);
     loginInput.value = "";
     paintMainPage();
 }
 
-const savedUsername = localStorage.getItem(USERNAME_KEY);
+const savedUsername = localStorage.getItem(LOGIN_USERNAME_KEY);
 
 if (savedUsername === null) {
     paintLobbyPage();

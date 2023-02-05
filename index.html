@@ -8,13 +8,13 @@
     </head>
     <body>
         <div class="container">
-            <div class="hidden lobby">
+            <div class="lobby hidden">
                 <form id="login-form">
                     <input type="text" placeholder="Enter your name" maxlength="15" required />
                     <button id="login-button">Login</button>
                 </form>
             </div>
-            <div class="hidden main">
+            <div class="main hidden">
                 <div class="top">
                     <div id="weather">
                         <img class="icon" height="30px" width="30px" />
@@ -34,16 +34,19 @@
                         <span class="quote"></span>
                         <span class="character"></span>
                     </div>
-                    <div class="todo-modal">
-                        <form id="todo-form">
-                            <input type="text" placeholder="Write a To Do and Press Enter" required />
-                        </form>
-                        <ul id="todo-list"></ul>
+                    <button id="todo-button">Todo</button>
+                    <div id="todo-modal" class="modal-overlay hidden">
+                        <div class="modal-window">
+                            <form id="todo-form">
+                                <input type="text" placeholder="Write a To Do and Press Enter" required />
+                            </form>
+                            <ul id="todo-list"></ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script src="js/loginout.js"></script>
+        <script src="js/login.js"></script>
         <script src="js/background.js"></script>
         <script src="js/weather.js"></script>
         <script src="js/clock.js"></script>
