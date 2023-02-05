@@ -41,12 +41,32 @@ table {
 	border-spacing: 0;
 }
 
-* {
-    box-sizing: border-box;
+:root {
+    /* color */
+    --color-white: #fafafa;
+    --color-light-grey: #dfdfdf;
+    --color-background: #1d1a1a49;
+    --color-todolist: #1d1d1db6;
+    --color-dark-grey: #3d3535b6;
+    --color-deep-dark-grey: #0f0e0eb6;
+  
+    /* size */
+    --base-space: 8px;
+    --large-space: 12px;
+    --size-button: 60px;
+    --size-border-radius: 5px;
+    --size-placeholder: 18px;
+  
+    /* font size */
+    --font-large: 20px;
+    --font-regular: 16px;
+    --font-medium: 14px;
 }
-
-.hidden {
-    display: none;
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
   
 html {
@@ -55,11 +75,63 @@ html {
   
 body {
     height: 100%;
-    opacity: 100%;
     overflow: hidden;
 }
 
 .container {
     height: 100%;
     background-size: cover;
+}
+
+.lobby {
+    height: 100%;
+    position: relative;
+}
+
+.lobby::before {
+    content: "";
+    position: absolute;
+    opacity: 50%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000000;
+}
+
+#login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main {
+    height: 100%;
+    position: relative;
+    
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    opacity: 20%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: #000000;
+}
+
+.main h1 {
+    color: red;
+    position: relative;
+}
+
+#logout-button {
+    position: relative;
+}
+
+.hidden {
+    display: none;
 }
