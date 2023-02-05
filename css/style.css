@@ -45,8 +45,6 @@ table {
     --color-white: #fafafa;
     --color-light-grey: #dfdfdf;
     --color-medium-grey: #b3b3b3;
-
-    --size-placeholder: 30px;
 }
 
 * {
@@ -62,7 +60,7 @@ html {
 body {
     height: 100%;
     overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
 .container {
@@ -109,7 +107,7 @@ body {
 }
 
 #login-form input::placeholder {
-    font-size: var(--size-placeholder);
+    font-size: 30px;
     color: var(--color-light-grey);
 }
 
@@ -140,7 +138,7 @@ body {
 .main::before {
     content: "";
     position: absolute;
-    opacity: 20%;
+    opacity: 40%;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -171,11 +169,54 @@ body {
 }
 
 #weather div>span {
-    margin: 0px 3px;
+    margin: 0px 5px;
 }
 
 .middle {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
     position: relative;
+}
+
+#clock {
+    margin: 12px;
+    font-weight: 550;
+    font-size: 135px;
+    color: var(--color-white);
+}
+
+#today-info {
+    margin: 10px;
+    font-weight: 550;
+    font-size: 25px;
+    color: var(--color-white);
+}
+
+#hello-message {
+    margin: 12px;
+    font-weight: 550;
+    font-size: 55px;
+    color: var(--color-white);
+}
+
+#logout-button {
+    width: 120px;
+    background: none;
+    border: 2px solid var(--color-light-grey);
+    border-radius: 100px;
+    margin: 10px;
+    padding: 8px;
+    font-size: 20px;
+    color: var(--color-white);
+}
+
+#logout-button:hover {
+    background: var(--color-medium-grey);
+    opacity: 80%;
+    cursor: pointer;
 }
 
 .bottom {

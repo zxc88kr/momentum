@@ -16,7 +16,7 @@ function onGeoOk(position) {
         icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
         status.innerText = `${data.weather[0].main}`;
         city.innerText = data.name;
-        temperature.innerText = `${data.main.temp}°C`;
+        temperature.innerText = `${Math.round(data.main.temp * 10) / 10}°C`;
     });
 }
 
