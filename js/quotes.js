@@ -68,7 +68,7 @@ const quotes = [
         character: "맹구"
     },
     {
-        quote: "커다란 자갈돌은 짱돌, 빙글빙글 돌아가는 맷돌",
+        quote: "커다란 자갈돌은 짱돌, 빙글빙글 돌아가는 맷돌.",
         character: "맹구"
     },
     {
@@ -96,7 +96,7 @@ const quotes = [
         character: "신형만"
     },
     {
-        quote: "당연하던 평범한 일상이 진정한 행복이었어",
+        quote: "당연하던 평범한 일상이 진정한 행복이었어.",
         character: "신형만"
     },
     {
@@ -140,7 +140,7 @@ const quotes = [
         character: "봉미선"
     },
     {
-        quote: "그래도.... 애들한텐.... 엄마가 있어야죠.",
+        quote: "그래도... 애들한텐... 엄마가 있어야죠.",
         character: "봉미선"
     },
     {
