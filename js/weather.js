@@ -7,15 +7,21 @@ function onGeoOk(position) {
     fetch(url)
     .then((res) => res.json())
     .then((data) => {
-        const city = document.querySelector("#weather span:first-child");
-        const weather = document.querySelector("#weather span:last-child");
+        const weather = document.getElementById("weather");
+        const icon = weather.querySelector(".icon");
+        const status = weather.querySelector(".status");
+        const city = weather.querySelector(".city");
+        const temperature = weather.querySelector(".temperature");
+
+        icon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+        status.innerText = `${data.weather[0].main}`;
         city.innerText = data.name;
-        weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+        temperature.innerText = `${data.main.temp}°C`;
     });
 }
 
 function onGeoError() {
-    alert("Can't find you. No weather for you.");
+    alert("Please allow access to location information.");
 }
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);

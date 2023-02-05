@@ -149,8 +149,8 @@ const quotes = [
     }
 ];
 
-const quote = document.querySelector("#quote span:first-child");
-const character = document.querySelector("#quote span:last-child");
+const quote = document.querySelector("#quote .quote");
+const character = document.querySelector("#quote .character");
 
 const todayQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
