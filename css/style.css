@@ -68,7 +68,6 @@ body {
 .container {
     height: 100%;
     background-size: cover;
-    position: inherit;
 }
 
 .lobby {
@@ -131,7 +130,10 @@ body {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    width: 100%;
     position: relative;
 }
 
@@ -147,7 +149,29 @@ body {
 }
 
 .top {
+    display: flex;
+    height: 10%;
+    justify-content: flex-end;
+    align-items: center;
     position: relative;
+}
+
+#weather {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    align-items: center;
+    color: var(--color-white);
+}
+
+#weather div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#weather div>span {
+    margin: 0px 3px;
 }
 
 .middle {
