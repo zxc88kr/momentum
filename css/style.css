@@ -42,45 +42,33 @@ table {
 }
 
 :root {
-    /* color */
     --color-white: #fafafa;
     --color-light-grey: #dfdfdf;
-    --color-background: #1d1a1a49;
-    --color-todolist: #1d1d1db6;
-    --color-dark-grey: #3d3535b6;
-    --color-deep-dark-grey: #0f0e0eb6;
-  
-    /* size */
-    --base-space: 8px;
-    --large-space: 12px;
-    --size-button: 60px;
-    --size-border-radius: 5px;
-    --size-placeholder: 18px;
-  
-    /* font size */
-    --font-large: 20px;
-    --font-regular: 16px;
-    --font-medium: 14px;
+    --color-medium-grey: #b3b3b3;
+
+    --size-placeholder: 30px;
 }
-  
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-  
+
 html {
     height: 100%;
 }
-  
+
 body {
     height: 100%;
     overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
     height: 100%;
     background-size: cover;
+    position: inherit;
 }
 
 .lobby {
@@ -91,7 +79,7 @@ body {
 .lobby::before {
     content: "";
     position: absolute;
-    opacity: 50%;
+    opacity: 80%;
     top: 0px;
     left: 0px;
     right: 0px;
@@ -100,16 +88,51 @@ body {
 }
 
 #login-form {
+    display: flex;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+#login-form input {
+    background: none;
+    border: none;
+    border-bottom: 2px solid var(--color-light-grey);
+    padding: 2px;
+    font-size: 40px;
+    color: var(--color-white);
+    text-align: center;
+}
+
+#login-form input:focus {
+    outline: none;
+}
+
+#login-form input::placeholder {
+    font-size: var(--size-placeholder);
+    color: var(--color-light-grey);
+}
+
+#login-button {
+    display: none;
+    width: 75px;
+    background: none;
+    border: 2px solid var(--color-light-grey);
+    border-radius: 10px;
+    margin: 8px 0px 2px 8px;
+    font-size: 20px;
+    color: var(--color-white);
+}
+
+#login-button:hover {
+    background: var(--color-medium-grey);
+    cursor: pointer;
+}
+
 .main {
     height: 100%;
     position: relative;
-    
 }
 
 .main::before {
