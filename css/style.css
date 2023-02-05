@@ -220,7 +220,24 @@ body {
 }
 
 .bottom {
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
     position: relative;
+}
+
+#quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+}
+
+#quote span {
+    margin: 2px 0px;
 }
 
 .hidden {
